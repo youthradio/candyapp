@@ -1,0 +1,345 @@
+
+/**{border: 1px solid;}*/
+
+body{
+  background: #96CCDD;
+  font-family: 'Merriweather', serif;
+  height: 100%;
+}
+#title{
+	color: white;
+	font-family: "Kreon";
+	font-size: 3.5em;
+
+}
+#title2{
+	color: white;
+	font-family: 'Merriweather', serif;
+	font-size: 175%;
+	position: relative;
+	bottom: 20px;
+}
+#instructions, #help, #team, #end{
+	text-align: center;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+p{
+	font-size: 10px;
+	color: white;
+}
+.row2{
+	padding-top: 30px;
+}
+
+.has_lead img, .has_no_lead img{
+	height: 175px;
+	width: 175px;
+}
+
+#borderline{
+	height: 150px;
+	width: 100%;
+	border: 5px solid white;
+	border-radius: 5px;
+}
+.answer{
+	margin-top: 10%;
+	text-align: center;
+	color: white;
+	font-family: 'Merriweather';
+	font-size: 3.5em;
+	font-weight: 400;
+}
+
+
+#candies{
+	padding-top: 10%;
+	position: relative;
+}
+
+.candy {
+	position: absolute;
+	bottom: 0;
+}
+
+#one {
+	 top: 20%;
+	 left: 51%;
+	 height: 183px;
+	 width: auto;
+}
+
+
+#two{
+	left: 45%;
+	height: auto;
+	width: 200px;
+}
+
+
+#three{
+	left: 35%;
+	height: 160px;
+	width: auto;
+}
+
+
+
+#four{
+	bottom: -100px;
+	left: 40%;
+	height: 100px;
+	width: auto;
+}
+
+
+
+#five{
+	top: -120px;
+	left: 60%;
+	height: 150px;
+	width: auto;
+}
+
+
+
+#six{
+	bottom: -130px;
+	left: 58%;
+}
+
+#seven{
+	bottom: -115px;
+	left: 40%;
+	height: 180px;
+}
+
+#eight{
+	top: -73px;
+	left: 28%;
+	height: 180px;
+}
+
+#nine{
+	bottom: -150px;
+	left: 43%;
+}
+
+#ten{
+	bottom: -20px;
+	left: 30%;
+	height: 130px;
+	width: auto;
+}
+
+
+#eleven{
+	bottom: -100px;
+	left: 50%;
+}
+
+#twelve{
+	top: -70px;
+	left: 40%;
+	height: 140px;
+	width: auto;
+}
+
+#thirteen{
+	top: -80px;
+	left: 31%;
+	height: 180px;
+}
+
+
+
+#fourteen{
+	top: -40px;
+	left: 55%;
+	height: 180px;
+}
+
+#fifteen{
+	height: 170px;
+	top: -30px;
+	left: 65%;
+}
+
+#sixteen{
+	height: 180px;
+	left: 60%;
+	top: 5px;
+}
+
+#seventeen{
+	height: 180px;
+	width: auto;
+	top: -55px;
+	left: 30%;
+}
+
+#eighteen{
+	height: 150px;
+	width: auto;
+	top: 50%;
+	left: 22%;
+}
+
+#nineteen{
+	height: 143px;
+	width: auto;
+	top: 35px;
+	left: 35%;
+}
+
+#twenty{
+	top: -10px;
+	left: 43%;
+}
+
+.sizing {
+	height: 120px!important;
+}
+
+.logo{
+	position: absolute;
+	height: 75px;
+	width: auto;
+	bottom: 20px;
+	right: 20px;
+}
+
+.smaller{
+	font-size: 20px;
+}
+
+/* Modal */
+
+.modal-content {
+	background-color: #a5bcdb;
+	border: solid 10px white;
+}
+
+.modal-header {
+	border-bottom: none;
+}
+.modal-title {
+	text-align: center;
+	color: white;
+	font-family: 'Merriweather';
+
+}
+.modal-subtitle {
+	text-align: center;
+	color: white;
+	font-family: 'Merriweather';
+	font-size: medium;
+	font-weight: 300;
+}
+
+.body-instructions{
+	width: 525px;
+	text-align: center;
+	color: white;
+	font-family: 'Merriweather';
+	font-size: medium;
+	font-weight: 300;
+	position: absolute;
+	top: -10px;
+}
+
+.modal-title-help {
+	text-align: center;
+	color: white;
+	font-family: 'Merriweather';
+
+}
+
+.body-help{
+	text-align: center;
+	color: white;
+	font-family: 'Merriweather';
+	font-size: medium;
+	font-weight: 300;
+}
+
+.bio_pic{
+	width:130px;
+	height:auto;
+	float: left; 
+	margin-right: 10px;
+}
+.info_pic{
+	float: left; 
+}
+.info_text{
+	float: right;
+}
+.forpadding{
+	padding: 0px;
+}
+.info_border{
+	padding-top: 10px; 
+	margin-bottom:20px ;
+	border: 5px solid white;
+	border-radius: 5px;
+}
+
+.extra_margin{
+	margin-top: 40px;
+}
+
+hr{
+	clear: left;
+}
+.modal-body p{
+	color: white;
+	font-family: 'Merriweather';
+	font-size: medium;
+	font-weight: 300;
+}
+.app_screenshot{
+	width:90%;
+	height:auto;
+	border-radius: 5px;
+	border: white solid 5px;
+	margin-top: 40px;
+	margin-left: 5%;
+
+}
+#not_for_mobile{
+	text-align: center;
+	color: white;
+	font-family: 'Merriweather';
+	font-size: 3.5em;
+	font-weight: 400;
+}
+.not_for_mobile_pic{
+  -webkit-animation: swim 3s infinite;
+  animation: swim 3s infinite;
+}
+
+@-webkit-keyframes swim {
+  0% {
+    -webkit-transform: translateY(-50px) translateX(0) rotate(100deg);
+    transform: translateY(-50px) translateX(0) rotate(100deg);
+  }
+  25% { 
+    -webkit-transform: translateY(50px) translateX(100px) rotate(90deg); 
+    transform: translateY(50px) translateX(100px) rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translateY(100px) translateX(400px);
+    transform: translateY(100px) translateX(400px);
+  }
+  75% {
+    -webkit-transform: translateY(50px) translateX(250px) rotate(-90deg);
+    transform: translateY(50px) translateX(250px) rotate(-90deg);
+  }
+  100% {
+    -webkit-transform: translateY(-170px) translateX(-300px) rotate(-110deg);
+    transform: translateY(-170px) translateX(-300px) rotate(-100deg);
+  }
+}
