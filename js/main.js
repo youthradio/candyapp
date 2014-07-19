@@ -60,7 +60,7 @@ function drag(){
   }
 }
 function goBack() {
-    window.history.back()
+    window.location = "https://youthradio.org/";
 }
 function reset(){
   window.location.reload()
