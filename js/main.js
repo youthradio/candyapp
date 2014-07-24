@@ -4,18 +4,16 @@
 $(drag);
 
 $(document).ready(function(){
-$('#myModal').modal('show')
+  $('#myModal').modal('show')
 })
 
 
 $(document).ready(function(){
   if ($(window).width() < 700){
-  $("body").html("<h1 id='not_for_mobile'>Not For Mobile</h1> <span class='fa-stack fa-5x not_for_mobile_pic'><i class='fa fa-paper-plane fa-stack-1x fa-inverse'></i></span>")
-  // window.onload= function popup(){window.alert("Best for web.");}
-}
-  else if ($(window).width()<1000){
-  var instruct = getElementById("instructions");
-  instruct.style.left= "100px";  
+    $("body").html("<h1 id='not_for_mobile'>Not For Mobile</h1> <span class='fa-stack fa-5x not_for_mobile_pic'><i class='fa fa-paper-plane fa-stack-1x fa-inverse'></i></span>")
+  }else if ($(window).width()<1000){
+    var instruct = $("#instructions");
+    instruct.style.left = "100px";
   }
 
 })
