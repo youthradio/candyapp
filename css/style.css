@@ -34,13 +34,20 @@ body{
 
 #score{
 	font-family: 'Merriweather', serif;
-	color: rgb(233, 92, 74);
+	color: #DE7087;
 	font-size: 40px;
-	margin-top: -45px;
 }
 
+.score{
+	font-family: 'Merriweather', serif;
+	color: white;
+	font-size: 40px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
 .green{
-	color: green!important;
+	color: #8EF883!important;
 }
 
 p{

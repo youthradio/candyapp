@@ -33,7 +33,7 @@ function drag(){
 
   var right= 0
   var score = 0
-
+  var snd = new Audio("drop.wav"); // buffers automatically when created
   function handleDrop(event, ui){
     var lead_status = $(this).data().status
     var candy_status = ui.draggable.data().lead
@@ -44,9 +44,10 @@ function drag(){
       right++
       score++
       $(".answer").html("RIGHT!")
+      snd.play();
       $("#score").html(score)
       if (right === 20){
-        $("#score").html("You're done! Your score is " + score)
+        $("#score").html("You're done! Your score is " + score + ".")
         }
       if (score > 0){
         $("#score").addClass("green")
