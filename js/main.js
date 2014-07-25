@@ -3,10 +3,6 @@
 
 $(drag);
 
-$(document).ready(function(){
-  $('#myModal').modal('show')
-})
-
 
 $(document).ready(function(){
   if ($(window).width() < 700){
@@ -15,7 +11,7 @@ $(document).ready(function(){
     var instruct = $("#instructions");
     instruct.style.left = "100px";
   }
-
+  $('#myModal').modal('show')
 })
 
 
@@ -25,7 +21,7 @@ function drag(){
     stop: function(){
       $(this).draggable('option','revert','invalid');
       }
-    })
+})
 
   $(".has_lead").droppable({
     drop: handleDrop
@@ -35,6 +31,8 @@ function drag(){
      drop: handleDrop
   })
 
+  var right= 0
+  var score = 0
 
   function handleDrop(event, ui){
     var lead_status = $(this).data().status
@@ -43,9 +41,27 @@ function drag(){
 
     if (lead_status == candy_status ){
       ui.draggable.toggle("drop");
+      right++
+      score++
       $(".answer").html("RIGHT!")
+      $("#score").html(score)
+      if (right === 20){
+        $("#score").html("You're done! Your score is " + score)
+        }
+      if (score > 0){
+        $("#score").addClass("green")
+      }else{
+        $("#score").removeClass("green")
+      }
     }else if (lead_status != candy_status ){
       ui.draggable.draggable('option','revert',true)
+      score--
+      $("#score").html(score)
+      if (score > 0){
+        $("#score").addClass("green")
+      }else{
+        $("#score").removeClass("green")
+      }
       if(candy_ing=="m"){
         $(".answer").html("<div class='smaller'>WRONG. Remember, some candy with molasses often contains lead.</div>")
       }else if(candy_ing=="g"){
@@ -53,10 +69,11 @@ function drag(){
       }else{
         $(".answer").html("<div class='smaller'>WRONG. Try again!</div>")
       }
-
     }
   }
 }
+
+// reset functions
 function goBack() {
     window.location = "https://youthradio.org/";
 }

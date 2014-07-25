@@ -32,6 +32,17 @@ body{
 	background-color: rgb(102, 142, 153);
 }
 
+#score{
+	font-family: 'Merriweather', serif;
+	color: rgb(233, 92, 74);
+	font-size: 40px;
+	margin-top: -45px;
+}
+
+.green{
+	color: green!important;
+}
+
 p{
 	font-size: 14px;
 	color: white;
