@@ -16,6 +16,10 @@ body{
 	font-size: 1.5em;
 }
 
+#title2 a{
+	color: white;
+}
+
 #instructions, #help, #team, #end{
 	text-align: center;
 	font-size: 1.5em;
@@ -38,13 +42,25 @@ body{
 	font-size: 40px;
 }
 
+.right{
+	color: #8EF883;
+}
+
+.wrong{
+	color: #DE7087;
+}
+
 .score{
 	font-family: 'Merriweather', serif;
 	color: white;
+	text-align: center;
 	font-size: 40px;
 	position: absolute;
 	bottom: 20px;
 	left: 20px;
+	width: 260px;
+	background-color: rgb(102, 142, 153);
+	border-radius: 5px;
 }
 .green{
 	color: #8EF883!important;
@@ -69,15 +85,15 @@ p{
 	width: 100%;
 	border: 5px solid white;
 	border-radius: 5px;
+	background-color: rgb(102, 142, 153);
 }
 
 .answer{
-	margin-top: 10%;
+	margin: 3%;
 	text-align: center;
 	color: white;
 	font-family: 'Merriweather';
-	font-size: 3.5em;
-	font-weight: 400;
+	font-size: 20px;
 }
 
 
@@ -242,46 +258,36 @@ p{
 .modal-content {
 	background-color: #a5bcdb;
 	border: solid 10px white;
+	text-align: center;
+	color: white;
 }
 
 .modal-header {
 	border-bottom: none;
 }
-.modal-title {
-	text-align: center;
-	color: white;
-	font-family: 'Merriweather';
 
-}
 .modal-subtitle {
-	text-align: center;
-	color: white;
-	font-family: 'Merriweather';
 	font-size: 12px;
 	font-weight: 300;
 }
-
-.body-instructions{
-	text-align: center;
-	color: white;
-	font-family: 'Merriweather';
-	font-size: 15px;
-	font-weight: 300;
-	position: absolute;
-	top: -10px;
+.note{
+	font-size: 10px;
 }
 
-.modal-title-help {
-	text-align: center;
+.note a{
 	color: white;
-	font-family: 'Merriweather';
+}
 
+.modal-body{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.body-instructions{
+	font-size: 15px;
 }
 
 .body-help{
-	text-align: center;
-	color: white;
-	font-family: 'Merriweather';
 	font-size: medium;
 	font-weight: 300;
 }
@@ -296,12 +302,20 @@ p{
 .info_pic{
 	float: left;
 }
-.info_text{
+
+.info-text{
 	float: right;
+	text-align: justify;
 }
+
+.bio-text{
+	text-align: justify;
+}
+
 .forpadding{
 	padding: 0px;
 }
+
 .info_border{
 	padding-top: 10px;
 	margin-bottom:20px ;
@@ -310,7 +324,7 @@ p{
 }
 
 .extra_margin{
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 hr{
@@ -318,8 +332,6 @@ hr{
 }
 
 .modal-body p{
-	color: white;
-	font-family: 'Merriweather';
 	font-size: 15px;
 	font-weight: 300;
 }
@@ -329,10 +341,9 @@ hr{
 	height:auto;
 	border-radius: 5px;
 	border: white solid 5px;
-	margin-top: 40px;
-/*	margin-left: 5%;*/
-
+	margin-bottom: 10px;
 }
+
 #not_for_mobile{
 	text-align: center;
 	color: white;
