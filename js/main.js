@@ -43,13 +43,16 @@ function drag(){
     var lead_status = $(this).data().status
     var candy_status = ui.draggable.data().lead
     var candy_ing = ui.draggable.data().ing
+    var lead_amount = ui.draggable.data().amount
     var facts = ["<span class='right'>RIGHT!</span> Did you know that businesses are required to warn customers when the amount of lead in food exceeds ten parts per billion?", "<span class='right'>RIGHT!</span> Did you know that harmful amounts of lead can permanently damage kids' developing brains?", "<span class='right'>RIGHT!</span> Did you know that a significant number of candies sold in California stores were recently found to contain harmful amounts of lead?", "<span class='right'>RIGHT!</span> Did you know that if inhaled or swallowed, lead is very poisonous. Lead poisoning can have a major effect on the body's nervous system." ]
     var rand = facts[Math.floor(Math.random() * facts.length)];
     if (lead_status == candy_status ){
       ui.draggable.toggle("drop");
       right++
       score++
+      var new_width = lead_amount + "%"
       $(".answer").html(rand)
+      $(".meter").css("width", new_width )
       snd_right.play();
       $("#score").html(score)
       if (right === 20){

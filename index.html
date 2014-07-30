@@ -3,7 +3,8 @@
 <head>
   <title> Toxic Candy </title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
-<link rel="shortcut icon" href="images/green_basket.png">
+  <link rel="shortcut icon" href="images/green_basket.png">
+
   <!-- css -->
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
@@ -23,7 +24,6 @@
   <div class="container-fluid">
 
     <!-- Row 1 -->
-
     <div class="row">
       <div class="col-md-6 col-lg-8">
         <img id="title" src="images/title.png">
@@ -84,10 +84,12 @@
           </div>
         </div>
 
-        <div class="col-sm-4 text-center">
-
+        <div class="col-sm-4 text-center margin-top">
           <div class="row text-center">
+            <img class="ppm" src="images/border.png">
             <div id="borderline">
+              <div class="meter">
+                </div>
               <div class="answer">
               </div>
             </div>
@@ -107,60 +109,62 @@
       <div id="candies">
         <div class="col-xs-12">
 
-         <img class="candy" data-lead="true" data-ing="m" id="one" src="images/candy1.png">
+         <img class="candy" data-lead="true" data-amount="27" data-ing="m" id="one" src="images/candy1.png">
 
-         <img class="candy" data-lead="false" id="two" src="images/candy2.png">
+         <img class="candy" data-lead="false" data-amount="0" id="two" src="images/candy2.png">
 
-         <img class="candy" data-lead="false" id="three" src="images/candy3.png">
+         <img class="candy" data-lead="false" data-amount="0" id="three" src="images/candy3.png">
 
-         <img class="candy" data-lead="true" id="four" src="images/candy4.png">
+         <img class="candy" data-lead="true" data-amount="30" id="four" src="images/candy4.png">
 
-         <img class="candy" data-lead="true" id="five" src="images/candy5.png">
+         <img class="candy" data-lead="true" data-amount="40" id="five" src="images/candy5.png">
 
-         <img class="candy sizing"  data-lead="false" id="six"c src="images/candy6.png">
+         <img class="candy sizing"  data-lead="false" data-amount="0" id="six"c src="images/candy6.png">
 
-         <img class="candy"  data-lead="false" id="seven" src="images/candy7.png">
+         <img class="candy"  data-lead="false" data-amount="0" id="seven" src="images/candy7.png">
 
-         <img class="candy" data-lead="false" id="eight" src="images/candy8.png">
+         <img class="candy" data-lead="false" data-amount="0" id="eight" src="images/candy8.png">
 
-         <img class="candy" data-lead="false" id="nine" src="images/candy9.png">
+         <img class="candy" data-lead="false" data-amount="0" id="nine" src="images/candy9.png">
 
-         <img class="candy" data-lead="false" id="ten" src="images/candy10.png">
+         <img class="candy" data-lead="false" data-amount="0" id="ten" src="images/candy10.png">
 
-         <img class="candy" data-lead="false" id="eleven"  src="images/candy11.png">
+         <img class="candy" data-lead="false" data-amount="0" id="eleven"  src="images/candy11.png">
 
-         <img class="candy" data-lead="true" data-ing="m" id="twelve" src="images/candy12.png">
+         <img class="candy" data-lead="true" data-amount="65" data-ing="m" id="twelve" src="images/candy12.png">
 
-         <img class="candy" data-lead="true" id="thirteen" src="images/candy13.png">
+         <img class="candy" data-lead="true" data-amount="2.5" id="thirteen" src="images/candy13.png">
 
-         <img class="candy" data-lead="true" data-ing="g" id="fourteen" src="images/candy14.png">
+         <img class="candy" data-lead="true" data-amount="42.5" data-ing="g" id="fourteen" src="images/candy14.png">
 
-         <img class="candy" data-lead="false" id="fifteen" src="images/candy15.png">
+         <img class="candy" data-lead="false" data-amount="0" id="fifteen" src="images/candy15.png">
 
-         <img class="candy" data-lead="true" id="sixteen" src="images/candy16.png">
+         <img class="candy" data-lead="true" data-amount="100" id="sixteen" src="images/candy16.png">
 
-         <img class="candy" data-lead="true" id="seventeen" src="images/candy17.png">
+         <img class="candy" data-lead="true" data-amount="35" id="seventeen" src="images/candy17.png">
 
-         <img class="candy" data-lead="true" id="eighteen"src="images/candy18.png">
+         <img class="candy" data-lead="true" data-amount="100" id="eighteen"src="images/candy18.png">
 
-         <img class="candy" data-lead="true" id="nineteen" src="images/candy19.png">
+         <img class="candy" data-lead="true" data-amount="100" id="nineteen" src="images/candy19.png">
 
-         <img class="candy sizing" data-lead="true" data-ing="m" id="twenty"  src="images/candy20.png">
+         <img class="candy sizing" data-lead="true" data-amount="47.5" data-ing="m" id="twenty"  src="images/candy20.png">
        </div>
      </div>
    </div>
  </div>
-
  <!-- End of Row 3 -->
+<!-- End of container -->
 
 
-<img class="logo" onclick="reset()" src="images/whitelogo.png">
-
- <div class="score">Score: <span id="score">0</span>/20</div>
- <!-- End of container -->
+<!-- Logo and score -->
+  <img class="logo" onclick="reset()" src="images/whitelogo.png">
+  <div class="score">Score: <span id="score">0</span>/20</div>
 
 
  <!-- modals -->
+
+ <!-- Instruction Modal -->
+
  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

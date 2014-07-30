@@ -80,9 +80,14 @@ p{
 	width: 150px;
 }
 
+.ppm{
+	margin: 0 auto;
+}
+
 #borderline{
 	height: 150px;
 	width: 100%;
+	position: relative;
 	border: 5px solid white;
 	border-radius: 5px;
 	background-color: rgb(102, 142, 153);
@@ -92,10 +97,24 @@ p{
 	margin: 3%;
 	text-align: center;
 	color: white;
+	height: 100%;
 	font-family: 'Merriweather';
 	font-size: 20px;
 }
 
+.meter{
+	-webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+	position: absolute;
+	top: -5px;
+	left:0;
+	height: 100%;
+	width: 0px;
+	opacity: 1;
+	border-top: 5px red solid;
+}
 
 #candies{
 	padding-top: 8%;
@@ -327,6 +346,9 @@ p{
 	margin-top: 30px;
 }
 
+.margin-top{
+	margin-top: -60px;
+}
 hr{
 	clear: left;
 }
