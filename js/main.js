@@ -4,6 +4,7 @@
 $(drag);
 $(modals);
 $(mobile);
+
 var right= 0
 var score = 0
 var snd_right = new Audio("drop.wav"); // buffers automatically when created
