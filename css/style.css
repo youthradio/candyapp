@@ -409,3 +409,11 @@ hr{
     transform: translateY(-170px) translateX(-300px) rotate(-100deg);
   }
 }
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+.answer{
+	font-size: 12px;
+	}
+}
