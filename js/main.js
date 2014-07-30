@@ -44,24 +44,42 @@ function drag(){
     var candy_status = ui.draggable.data().lead
     var candy_ing = ui.draggable.data().ing
     var lead_amount = ui.draggable.data().amount
-    var facts = ["<span class='right'>RIGHT!</span> Did you know that businesses are required to warn customers when the amount of lead in food exceeds ten parts per billion?", "<span class='right'>RIGHT!</span> Did you know that harmful amounts of lead can permanently damage kids' developing brains?", "<span class='right'>RIGHT!</span> Did you know that a significant number of candies sold in California stores were recently found to contain harmful amounts of lead?", "<span class='right'>RIGHT!</span> Did you know that if inhaled or swallowed, lead is very poisonous. Lead poisoning can have a major effect on the body's nervous system." ]
-    var rand = facts[Math.floor(Math.random() * facts.length)];
+    var new_width = lead_amount + "%"
     if (lead_status == candy_status ){
       ui.draggable.toggle("drop");
       right++
       score++
-      var new_width = lead_amount + "%"
-      $(".answer").html(rand)
       $(".meter").css("width", new_width )
       snd_right.play();
       $("#score").html(score)
       if (right === 20){
-        $("#score").html("You're done! Your score is " + score + ".")
+        $("#score").html("You're done! Your score is " + score)
         }
       if (score > 0){
         $("#score").addClass("green")
       }else{
         $("#score").removeClass("green")
+      }
+      if(candy_ing=="m"){
+        $(".answer").html("<span class='right'>RIGHT!</span>Many types of black licorice are made with molasses, which may be a source of lead contamination.")
+      }else if(candy_ing=="g"){
+        $(".answer").html("<span class='right'>RIGHT!</span>Ginger candies often contain lead.")
+      }else if(candy_ing =="p"){
+        $(".answer").html("<span class='right'>RIGHT!</span>Did you know that candy, toys and jewelry can all be sources of lead exposure?")
+      }else if(candy_ing=="panda"){
+        $(".answer").html("<span class='right'>RIGHT! </span>In July 2014, Panda was one of several companies that signed a legal agreement to reformulate their products so they would no exceed the legal limit for lead.")
+      }else if(candy_ing == "tj"){
+        $(".answer").html("<span class='right'>RIGHT! </span>In July 2014, Trader Joe's was one of several companies that signed a legal agreement to reformulate their products so they would no longer exceed the legal limit for lead.")
+      }else if(candy_ing == "tj2"){
+        $(".answer").html("<span class='right'>RIGHT! </span>Did you know that harmful amounts of lead can permanently damage kids' developing brains?")
+      }else if(candy_ing == "tj4"){
+        $(".answer").html("<span class='right'>RIGHT! </span>In July 2014, Trader Joe's was one of several companies that signed a legal agreement to reformulate their products so they would no longer exceed the legal limit for lead.")
+      }else if(candy_ing == "santos"){
+        $(".answer").html("<span class='right'>RIGHT! </span> Did you know that according to California law, businesses are required to warn customers when the amount of lead in food exceeds ten parts per billion?")
+      }else if(candy_ing == "rm"){
+        $(".answer").html("<span class='right'>RIGHT! </span> Unlike most types of black licorice, red licorice does not contain molasses, which is thought to be a likely source of lead contamination.")
+      }else{
+        $(".answer").html("<span class='right'>RIGHT!</span> Nice job!")
       }
     }else if (lead_status != candy_status ){
       ui.draggable.draggable('option','revert',true)
@@ -77,6 +95,10 @@ function drag(){
         $(".answer").html("<span class='wrong'>WRONG!</span> Remember, some candy with molasses often contains lead.")
       }else if(candy_ing=="g"){
         $(".answer").html("<span class='wrong'>WRONG!</span> Ginger candies often contain lead.")
+      }else if(candy_ing=="panda"){
+        $(".answer").html("<span class='wrong'> WRONG! </span> Even though 'all natural' candies sound better for you, they may also be more likely to contain lead when an ingredient (molasses) has become contaminated.")
+      }else if(candy_ing=="tj3"){
+        $(".answer").html("<span class='wrong'> WRONG! </span>Although Red Vines&reg; black licorice was recalled for lead contamination in August 2012, the FDA cleared the product a few months later.")
       }else{
         $(".answer").html("<span class='wrong'>WRONG!</span> Try again!")
       }
