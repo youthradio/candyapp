@@ -6,19 +6,34 @@
   <link rel="shortcut icon" href="images/green_basket.png">
 
   <!-- css -->
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
   <!-- js -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
   <script src="js/jquery-ui-touch-punch.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+
+  <!-- ShareThis -->
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-1f944086-a593-db10-e69a-9ace51bb5", doNotHash: true, doNotCopy: false, hashAddressBar: false});</script>
+
+<!-- Open Graph -->
+    <meta property="og:title" content="Toxic Candy" />
+    <meta property="og:type" content="Gaming" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="In this game, based on 2013-2014 lead testing conducted by the California Department of Public Health, you'll shop for candy by dragging the products to either the 'Lead' basket or 'No Lead' basket. You'll see how each type of candy compares to the lead limit set by the state of California (0.1 ppm), as indicated by the red tab on the top of the info box." />
+    <meta property="og:site_name" content="Youth Radio: Toxic Candy" />
+    <meta property="fb:app_id" content="1443341205940135"/>
+
 
 </head>
 <body>
@@ -175,20 +190,21 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h2 class="modal-title" id="myModalLabel">CAN YOU TELL WHICH CANDY IS TOXIC?</h2>
-        <p class="modal-subtitle" id="myModalLabel2">WHICH CANDIES DO YOU THINK HAVE TESTED POSITIVE FOR LEAD? *</p>
         <p class="note"> <a href="http://www.cdph.ca.gov/programs/Pages/FDB%20Lead%20In%20Candy%20Program.aspx">*According to the California Department of Public Health Data</a></p>
          </div>
       <div class="modal-body">
         <img class="app_screenshot" src="images/screen_shot.jpg">
-        <p class="body-instructions"> When Americans buy candy from the grocery store, most assume the worst they're risking is tooth decay. But as it turns out, a significant number of candies sold in California stores were recently found to contain harmful amounts of lead, which even in low amounts has been linked to serious health problems including anemia, behavior problems and lowered IQ.</p>
-        <p class="body-instructions"> Lead-contaminated candies don't necessarily taste different than normal candies, so regular testing is necessary to tell which candies are safe. But shoppers don't always have the benefit of a toxicology report when they choose which products to buy. Instead they have to use their knowledge about ingredients and candy processing to make educated decisions about food safety. Sound difficult? Try it out yourself!</p>
-        <p class="body-instructions">In this game, based on 2013-2014 lead testing conducted by the California Department of Public Health, you'll shop for candy by dragging the products to either the "Lead" basket or "No Lead" basket and see if your hunches are right. Hit the Youth Radio logo to reset the game."</p>
+        <p class="body-instructions"> When Americans buy candy from the grocery store, most assume the worst they're risking is tooth decay. But as it turns out, a significant number of candies sold in California stores were recently found to contain lead, which even in low amounts has been linked to serious health problems including anemia, behavior problems and lowered IQ.</p>
+        <p class="body-instructions"> In this game, based on 2013-2014 lead testing conducted by the California Department of Public Health, you'll shop for candy by dragging the products to either the "Lead" basket or "No Lead" basket. You'll see how each type of candy compares to the lead limit set by the state of California (0.1 ppm), as indicated by the red tab on the top of the info box.</p>
+        <p class="body-instructions">Hit the Youth Radio logo to reset the game. Happy sorting!</p>
 
       </div>
     </div>
   </div>
 </div>
 
+
+<!-- This is the info modal -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -201,34 +217,32 @@
         <div class="row info_border">
           <div class="col-xs-3">
             <span class="fa-stack fa-5x info_pic">
-              <!-- <i class="fa fa-circle-thin fa-stack-2x fa-inverse"></i> -->
               <i class="fa fa-child fa-stack-1x fa-inverse"></i>
             </span>
           </div>
           <div class="col-xs-9">
-            <p class="info-text">When Americans buy candy from the grocery store, most assume the worst they're risking is tooth decay. But as it turns out, a significant number of candies sold in California stores were recently found to contain harmful amounts of lead, which can permanently damage kids' developing brains.</p>
+            <p class="info-text">Lead is a naturally occurring element that can be found in the water, soil, and even inside of your home! Ingesting lead can cause a wide variety of health problems, particularly in children and pregnant women. That's one of the reasons the government has set strict limits on how much lead is allowed in the foods we eat. According to California law, businesses are required to warn customers when the amount of lead in food exceeds ten parts per billion (0.1 ppm).</p>
+
           </div>
         </div>
         <div class="row info_border">
           <div class="col-xs-3">
             <span class="fa-stack fa-5x info_pic">
-              <!-- <i class="fa fa-circle-thin fa-stack-2x fa-inverse"></i> -->
               <i class="fa fa-warning fa-stack-1x fa-inverse"></i>
             </span>
           </div>
           <div class="col-xs-9">
-            <p class="info-text">According to California law, businesses are required to warn customers when the amount of lead in food exceeds ten parts per billion (0.01 ppm). But figuring out which candies are safe and which are not is trickier than you think. Some companies that used to sell tainted candies have cleaned up their products, while others are facing new sources of contamination in certain ingredients.</p>
+            <p class="info-text">But figuring out which candies are safe and which are not is trickier than you think. Lead-contaminated candies don't necessarily taste different than normal candies, so regular testing is necessary to tell which candies are safe. And some companies that used to sell tainted candies have cleaned up their products, while others are facing new sources of contamination in certain ingredients.  Most shoppers don't always have the benefit of a toxicology report when they choose which products to buy, so they have to use their knowledge about ingredients and candy processing to make educated decisions about food safety. Sound difficult? Try it out yourself!</p>
           </div>
         </div>
         <div class="row info_border">
           <div class="col-xs-3">
             <span class="fa-stack fa-5x info_pic">
-              <!-- <i class="fa fa-circle-thin fa-stack-2x fa-inverse"></i> -->
               <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
           </div>
           <div class="col-xs-9">
-            <p class="info-text">Test out your own lead candy IQ by sorting our pile of candy products into the pink and green grocery baskets. Each product's lead value is based on publicly available information provided by the State of California for 2013 and 2014.</p>
+            <p class="info-text">Test out your own lead candy IQ by sorting our pile of candy products into the pink and green grocery baskets. Each product's lead value is based on publicly available information provided by the State of California for 2013 and 2014, and may not reflect the most current levels of lead in these products.</p>
           </div>
         </div>
       </div>
@@ -236,6 +250,7 @@
   </div>
 </div>
 
+<!-- This is the bio modal -->
 <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -258,10 +273,33 @@
           <img src="https://youthradio.org/innovationlab/double-charged-app/images/lo.jpg" alt="Lo Benichou from Youth Radio" class="img-circle bio_pic">
           <p class="bio-text extra_margin">Lo Benichou is a multimedia journalist and web developer. She is the lead developer at the Innovation Lab. Her purpose: to hack storytelling and journalism, and create beautiful interactive content for the world wide web.</p>
           </div>
-
       </div>
     </div>
   </div>
 </div>
+
+<!-- Final Modal: Pops up when all sorting is done -->
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content purple">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h2 class="modal-title-help" id="myModalLabel">YOU'RE DONE!</h2>
+         <hr>
+        <div class="modal-body">
+          <div id="score-final"></div>
+          <hr>
+            <span st_url= "" st_title="Youth Radio: Toxic Candy" st_image="" st_summary="" class='st_sharethis_large' displayText='ShareThis'></span>
+            <span st_url= "" st_title="Youth Radio: Toxic Candy" st_image="" st_summary="" class='st_twitter_large' displayText='Tweet'></span>
+            <span st_url= "" st_title="Youth Radio: Toxic Candy" st_image="" st_summary="" class='st_facebook_large' displayText='Facebook'></span>
+            <span st_url= "" st_title="Youth Radio: Toxic Candy" st_image="" st_summary="" class='st_googleplus_large' displayText='Google +'></span>
+          <hr>
+          <p class="bio-text">Congratulations! You've sorted your sweets - and hopefully learned something in the process. For more information on lead contamination in candy, check out this <a href=" http://www.cdph.ca.gov/programs/Pages/FDB%20Lead%20In%20Candy%20Program.aspx">info page from the California Department of Public Health.</a></p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

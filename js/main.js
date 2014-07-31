@@ -1,19 +1,23 @@
 
-// this is the javascript. If your html is correct, this should work.
-
+// Functions called on load
 $(drag);
 $(modals);
 $(mobile);
 
+
+// Variables
 var right= 0
 var score = 0
 var snd_right = new Audio("drop.wav"); // buffers automatically when created
 var snd_wrong = new Audio("buzz.mp3")
 
+
+// First modal
 function modals(){
   $('#myModal').modal('show')
 }
 
+// On mobile
 function mobile(){
   if ($(window).width() < 700){
     $("body").html("<h1 id='not_for_mobile'>Not For Mobile</h1> <span class='fa-stack fa-5x not_for_mobile_pic'><i class='fa fa-paper-plane fa-stack-1x fa-inverse'></i></span>")
@@ -23,29 +27,33 @@ function mobile(){
   }
 }
 
+// jQuery Drag funciton
 function drag(){
   $(".candy").draggable({
     revert: 'invalid',
     stop: function(){
       $(this).draggable('option','revert','invalid');
       }
-})
+    })
 
+  // Makes the baskets droppable
   $(".has_lead").droppable({
     drop: handleDrop
   })
-
   $(".has_no_lead").droppable({
      drop: handleDrop
   })
 
-
+// This is the logic to handle the drop
   function handleDrop(event, ui){
+    // Variables
     var lead_status = $(this).data().status
     var candy_status = ui.draggable.data().lead
     var candy_ing = ui.draggable.data().ing
     var lead_amount = ui.draggable.data().amount
     var new_width = lead_amount + "%"
+
+// If answer is right
     if (lead_status == candy_status ){
       ui.draggable.toggle("drop");
       right++
@@ -53,14 +61,20 @@ function drag(){
       $(".meter").css("width", new_width )
       snd_right.play();
       $("#score").html(score)
+
+    // If right is 20 then the game is over
       if (right === 20){
-        $("#score").html("You're done! Your score is " + score)
+        $('#myModal4').modal('show')
+        $("#score-final").html(" Your score is " + score +
+          "/20.")
         }
       if (score > 0){
         $("#score").addClass("green")
       }else{
         $("#score").removeClass("green")
       }
+
+      // Handles messages for different types of candy
       if(candy_ing=="m"){
         $(".answer").html("<span class='right'>RIGHT! </span>Many types of black licorice are made with molasses, which may be a source of lead contamination.")
       }else if(candy_ing=="g"){
@@ -82,16 +96,22 @@ function drag(){
       }else{
         $(".answer").html("<span class='right'>RIGHT! </span>Nice job!")
       }
+
+// If answer is wrong
     }else if (lead_status != candy_status ){
       ui.draggable.draggable('option','revert',true)
       score--
       $("#score").html(score)
       snd_wrong.play();
+
+      // handles score colors
       if (score > 0){
         $("#score").addClass("green")
       }else{
         $("#score").removeClass("green")
       }
+
+      // Handles messages for different types of candy
       if(candy_ing=="m"){
         $(".answer").html("<span class='wrong'>WRONG! </span>Remember, some candy with molasses often contains lead.")
       }else if(candy_ing=="g"){

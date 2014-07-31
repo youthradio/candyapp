@@ -387,6 +387,15 @@ hr{
   animation: swim 3s infinite;
 }
 
+.purple{
+	background-color: #B6B0CF;
+}
+
+#score-final{
+	font-size: 20px;
+	font-weight: 400;
+}
+
 @-webkit-keyframes swim {
   0% {
     -webkit-transform: translateY(-50px) translateX(0) rotate(100deg);
