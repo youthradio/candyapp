@@ -8,8 +8,8 @@ $(mobile);
 // Variables
 var right= 0
 var score = 0
-var snd_right = new Audio("drop.wav"); // buffers automatically when created
-var snd_wrong = new Audio("buzz.mp3")
+var snd_right = new Audio("https://youthradio.org/innovationlab/toxiccandy/drop.wav"); // buffers automatically when created
+var snd_wrong = new Audio("https://youthradio.org/innovationlab/toxiccandy/buzz.mp3")
 
 
 // First modal
