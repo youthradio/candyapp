@@ -29,10 +29,12 @@ function drag(){
 
   // Makes the basket and cross dropable
   $(".in_cart").droppable({
-    drop: buyCandy
+    drop: buyCandy,
+    activeClass: 'active'
   })
   $(".out_cart").droppable({
-     drop: ditchCandy
+     drop: ditchCandy,
+    activeClass: 'active'
   })
 
 // Handle the drop
@@ -40,6 +42,7 @@ function drag(){
   function buyCandy(event, ui){
     item++
     ui.draggable.toggle("drop");
+
     var lead_amount = ui.draggable.data().amount
     var name = ui.draggable.data().name
     total_amount = total_amount + lead_amount

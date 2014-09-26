@@ -76,14 +76,23 @@ p{
 }
 
 .in_cart img, .out_cart img{
-	height: 150px;
-	width: 150px;
-}
+	height: 200px;
+	width: 200px;
+  border-radius: 10px;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
 
+}
 
 
 .ppm{
 	margin: 0 auto;
+}
+
+.active img{
+  background-color: rgb(102, 142, 153);
 }
 
 /*#borderline{
