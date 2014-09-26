@@ -10,24 +10,26 @@
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://youthradio.org/innovationlab/toxiccandy/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
   <!-- js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
   <script src="https://youthradio.org/innovationlab/toxiccandy/js/jquery-ui-touch-punch.js"></script>
-  <script type="text/javascript" src="https://youthradio.org/innovationlab/toxiccandy/js/bootstrap.js"></script>
-  <script type="text/javascript" src="https://youthradio.org/innovationlab/toxiccandy/js/main.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 
 
-<!-- Open Graph -->
-    <meta property="og:title" content="Toxic Candy" />
-    <meta property="og:url" content="https://youthradio.org/toxiccandy/" />
-    <meta property="og:image" content="https://youthradio.org/innovationlab/toxiccandy/images/toxiccandyimg.jpg" />
-    <meta property="og:description" content="In this game, based on 2013-2014 lead testing conducted by the California Department of Public Health, you'll shop for candy by dragging the products to either the 'Lead' basket or 'No Lead' basket. You'll see how each type of candy compares to the lead limit set by the state of California (0.1 ppm), as indicated by the red tab on the top of the info box." />
-    <meta property="og:site_name" content="Youth Radio: Toxic Candy" />
-    <meta property="fb:app_id" content="1443341205940135"/>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Toxic Candy" />
+  <meta property="og:url" content="https://youthradio.org/toxiccandy/" />
+  <meta property="og:image" content="https://youthradio.org/innovationlab/toxiccandy/images/toxiccandyimg.jpg" />
+  <meta property="og:description" content="In this game, based on 2013-2014 lead testing conducted by the California Department of Public Health, you'll shop for candy by dragging the products to either the 'Lead' basket or 'No Lead' basket. You'll see how each type of candy compares to the lead limit set by the state of California (0.1 ppm), as indicated by the red tab on the top of the info box." />
+  <meta property="og:site_name" content="Youth Radio: Toxic Candy" />
+  <meta property="fb:app_id" content="1443341205940135"/>
 
 
 </head>
@@ -38,7 +40,6 @@
     <div class="row">
       <div class="col-md-6 col-lg-8">
         <img id="title" src="https://youthradio.org/innovationlab/toxiccandy/images/title.png">
-        <!-- <p id= "title">TOXIC CANDY</p> -->
         <p id="title2"><a href="https://youthradio.org/creative-studio/desk/innovation-lab">By Youth Radio's Innovation Lab</a></p>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -59,7 +60,7 @@
                   <i class="fa fa-circle-thin fa-stack-2x fa-inverse"></i>
                   <i class="fa fa-question fa-stack-1x fa-inverse"></i>
                 </span>
-                 <p>INFO</p>
+                <p>INFO</p>
               </div>
             </div>
             <div class="col-xs-3 text-center">
@@ -90,28 +91,20 @@
     <div class="row2">
       <div class="row">
         <div class="col-sm-4 text-center">
-          <div class="has_lead" data-status="true">
-            <img src="https://youthradio.org/innovationlab/toxiccandy/images/pink_basket.png"></img>
+          <div class="in_cart" data-status="true">
+            <img src="images/green_basket.png"></img>
           </div>
         </div>
 
-        <div class="col-sm-4 text-center margin-top">
-          <div class="row text-center">
-            <div class="meter_title">Lead Meter</div>
-            <img class="ppm" src="https://youthradio.org/innovationlab/toxiccandy/images/border.png">
-            <div id="borderline">
-              <div class="meter">
-                </div>
-              <div class="answer">
-                The legal limit of lead is 0.1 parts per million (ppm).
-                Keep an eye on the lead meter above for more info.
-              </div>
-            </div>
+        <div class="col-sm-4 text-center">
+          <div class="row">
+            <h3> Time to shop! Drop your candy in the basket or discard them. </h3>
           </div>
         </div>
+
         <div class="col-sm-4 text-center">
-          <div class="has_no_lead" data-status="false">
-            <img src="https://youthradio.org/innovationlab/toxiccandy/images/green_basket.png"></img>
+          <div class="out_cart" data-status="false">
+            <img src="images/close.png"></img>
           </div>
         </div>
       </div>
@@ -123,70 +116,70 @@
       <div id="candies">
         <div class="col-xs-12">
 
-         <img class="candy" data-lead="true" data-amount="27" data-ing="tj4" id="one" src="https://youthradio.org/innovationlab/toxiccandy/images/candy1.png">
+         <img class="candy" data-name="All Sorts -a- Licorice" data-amount="27" data-ing="tj4" id="one" src="https://youthradio.org/innovationlab/toxiccandy/images/candy1.png">
 
-         <img class="candy" data-lead="false" data-amount="0" data-ing="rm" id="two" src="https://youthradio.org/innovationlab/toxiccandy/images/candy2.png">
+         <img class="candy" data-name="Red Vines Original Red Twist" data-amount="0" data-ing="rm" id="two" src="https://youthradio.org/innovationlab/toxiccandy/images/candy2.png">
 
-         <img class="candy" data-lead="false" data-amount="0" data-ing="tj3" id="three" src="https://youthradio.org/innovationlab/toxiccandy/images/candy3.png">
+         <img class="candy" data-name="Red Vines Black Licorice Twist" data-amount="0" data-ing="tj3" id="three" src="https://youthradio.org/innovationlab/toxiccandy/images/candy3.png">
 
-         <img class="candy" data-lead="true" data-amount="30" id="four" src="https://youthradio.org/innovationlab/toxiccandy/images/candy4.png">
+         <img class="candy" data-name="Lucas Panzon Watermelon Lollipop" data-amount="30" id="four" src="https://youthradio.org/innovationlab/toxiccandy/images/candy4.png">
 
-         <img class="candy" data-lead="true" data-amount="40" id="five" src="https://youthradio.org/innovationlab/toxiccandy/images/candy5.png">
+         <img class="candy" data-name="Jonic-Food O'Say Jujube Hawthorn Hamburger Candy" data-amount="40" id="five" src="https://youthradio.org/innovationlab/toxiccandy/images/candy5.png">
 
-         <img class="candy sizing"  data-lead="false" data-amount="0" id="six"c src="https://youthradio.org/innovationlab/toxiccandy/images/candy6.png">
+         <img class="candy sizing"  data-name="Pica Fresca" data-amount="0" id="six"c src="https://youthradio.org/innovationlab/toxiccandy/images/candy6.png">
 
-         <img class="candy"  data-lead="false" data-amount="0" id="seven" src="https://youthradio.org/innovationlab/toxiccandy/images/candy7.png">
+         <img class="candy"  data-name="Jolly Ranchers Bites" data-amount="0" id="seven" src="https://youthradio.org/innovationlab/toxiccandy/images/candy7.png">
 
-         <img class="candy" data-lead="false" data-amount="0" id="eight" src="https://youthradio.org/innovationlab/toxiccandy/images/candy8.png">
+         <img class="candy" data-name="Go Naturally Organic Hard Candy" data-amount="0" id="eight" src="https://youthradio.org/innovationlab/toxiccandy/images/candy8.png">
 
-         <img class="candy" data-lead="false" data-amount="0" id="nine" src="https://youthradio.org/innovationlab/toxiccandy/images/candy9.png">
+         <img class="candy" data-name="Hello Kitty Tropical Mango Marshmallow" data-amount="0" id="nine" src="https://youthradio.org/innovationlab/toxiccandy/images/candy9.png">
 
-         <img class="candy" data-lead="false" data-amount="0" id="ten" src="https://youthradio.org/innovationlab/toxiccandy/images/candy10.png">
+         <img class="candy" data-name="Sour Lovers" data-amount="0" id="ten" src="https://youthradio.org/innovationlab/toxiccandy/images/candy10.png">
 
-         <img class="candy" data-lead="false" data-amount="0" id="eleven"  src="https://youthradio.org/innovationlab/toxiccandy/images/candy11.png">
+         <img class="candy" data-name="Haribo Happy Cola" data-amount="0" id="eleven"  src="https://youthradio.org/innovationlab/toxiccandy/images/candy11.png">
 
-         <img class="candy" data-lead="true" data-amount="65" data-ing="tj2" id="twelve" src="https://youthradio.org/innovationlab/toxiccandy/images/candy12.png">
+         <img class="candy" data-name="Gustaf's Allsorts Gourmet English Licorice" data-amount="65" data-ing="tj2" id="twelve" src="https://youthradio.org/innovationlab/toxiccandy/images/candy12.png">
 
-         <img class="candy" data-lead="true" data-amount="2.5" id="thirteen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy13.png">
+         <img class="candy" data-name="Golden Bonbon, Green Tea Nougat" data-amount="2.5" id="thirteen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy13.png">
 
-         <img class="candy" data-lead="true" data-amount="42.5" data-ing="g" id="fourteen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy14.png">
+         <img class="candy" data-name="Gingerbon" data-amount="42.5" data-ing="g" id="fourteen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy14.png">
 
-         <img class="candy" data-lead="false" data-amount="0" id="fifteen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy15.png">
+         <img class="candy" data-name="Coffe Rio" data-amount="0" id="fifteen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy15.png">
 
-         <img class="candy" data-lead="true" data-amount="100" data-ing="santos" id="sixteen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy16.png">
+         <img class="candy" data-name="Santos Rewadi Sugar" data-amount="100" data-ing="santos" id="sixteen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy16.png">
 
-         <img class="candy" data-lead="true" data-amount="35" data-ing="panda" id="seventeen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy17.png">
+         <img class="candy" data-name="Panda Licorice" data-amount="35" data-ing="panda" id="seventeen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy17.png">
 
-         <img class="candy" data-lead="true" data-amount="100" data-ing="p" id="eighteen"src="https://youthradio.org/innovationlab/toxiccandy/images/candy18.png">
+         <img class="candy" data-name="Natori Konbuame" data-amount="100" data-ing="p" id="eighteen"src="https://youthradio.org/innovationlab/toxiccandy/images/candy18.png">
 
-         <img class="candy" data-lead="true" data-amount="100" id="nineteen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy19.png">
+         <img class="candy" data-name="Lucky Country Aussie Style Black Soft Licorice" data-amount="100" id="nineteen" src="https://youthradio.org/innovationlab/toxiccandy/images/candy19.png">
 
-         <img class="candy sizing" data-lead="true" data-amount="47.5" data-ing="tj" id="twenty"  src="https://youthradio.org/innovationlab/toxiccandy/images/candy20.png">
+         <img class="candy sizing" data-name="Trader Joe's Candy-Coated Licorice"data-amount="47.5" data-ing="tj" id="twenty"  src="https://youthradio.org/innovationlab/toxiccandy/images/candy20.png">
        </div>
      </div>
    </div>
  </div>
  <!-- End of Row 3 -->
-<!-- End of container -->
+ <!-- End of container -->
 
 
-<!-- Logo and score -->
-  <img class="logo" onclick="reset()" src="https://youthradio.org/innovationlab/toxiccandy/images/whitelogo.png">
-  <div class="score">Score: <span id="score">0</span>/20</div>
+ <!-- Logo and score -->
+ <img class="logo" onclick="reset()" src="https://youthradio.org/innovationlab/toxiccandy/images/whitelogo.png">
+  <!-- <div class="score">Score: <span id="score">0</span>/20</div>
+-->
 
+<!-- modals -->
 
- <!-- modals -->
+<!-- Instruction Modal -->
 
- <!-- Instruction Modal -->
-
- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h2 class="modal-title" id="myModalLabel">CAN YOU TELL WHICH CANDY IS TOXIC?</h2>
         <p class="note"> <a href="http://www.cdph.ca.gov/programs/Pages/FDB%20Lead%20In%20Candy%20Program.aspx">*According to the California Department of Public Health Data</a></p>
-         </div>
+      </div>
       <div class="modal-body">
         <img class="app_screenshot" src="https://youthradio.org/innovationlab/toxiccandy/images/screen_shot.jpg">
         <p class="body-instructions"> When Americans buy candy from the grocery store, most assume the worst they're risking is tooth decay. But as it turns out, a significant number of candies sold in California stores were recently found to contain lead, which even in low amounts has been linked to serious health problems including anemia, behavior problems and lowered IQ.</p>
@@ -267,7 +260,7 @@
           <hr class ="extra_margin">
           <img src="https://youthradio.org/innovationlab/double-charged-app/images/lo.jpg" alt="Lo Benichou from Youth Radio" class="img-circle bio_pic">
           <p class="bio-text extra_margin">Lo Benichou is a multimedia journalist and web developer. She is the lead developer at the Innovation Lab. Her purpose: to hack storytelling and journalism, and create beautiful interactive content for the world wide web.</p>
-          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -276,22 +269,59 @@
 <!-- Final Modal: Pops up when all sorting is done -->
 <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content purple">
+    <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h2 class="modal-title-help" id="myModalLabel">YOU'RE DONE!</h2>
-         <hr>
-        <div class="modal-body">
-          <div id="score-final"></div>
-          <hr>
-           <a href="http://twitter.com/share?text=Do you know if your candy has lead? Check out the new gameing app from @youthradio's Innovation Lab.&url=http://bit.ly/yr-toxiccandy&hashtags=toxiccandy
-"target="_blank"><img class="soc" src="https://youthradio.org/innovationlab/toxiccandy/images/twitter_logo_white.png"></a>
-          <hr>
-          <p class="bio-text">Congratulations! You've sorted your sweets - and hopefully learned something in the process. For more information on lead contamination in candy, check out this <a href=" http://www.cdph.ca.gov/programs/Pages/FDB%20Lead%20In%20Candy%20Program.aspx">info page from the California Department of Public Health.</a></p>
+        <h2 class="modal-title-help" id="myModalLabel">Here is your receipt</h2>
+        <hr>
+        <div class="modal-body text-center">
+          <div class="row">
+            <div class="col-md-6">
+              <div id="slot">
+                <div id="paper-holder">
+                 <div id="paper">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h3>Toxic Candy</h3>
+                    </div>
+                    <div class="col-xs-12">
+                      <h4>From Youth Radio Interactive</h4>
+                    </div>
+                    <div class="col-xs-12">
+                      <p>This is your receipt.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <table class="table" id="items">
+                      <thead></thead>
+                      <tbody></tbody>
+                    </table>
+
+                    <table class="table">
+                      <tbody>
+                        <tr>TOTAL</tr>
+                        <tr id="total"></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <div class="codebar-cont">
+                        <img id="codebar" src="images/codebar.png">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <!--           <p class="bio-text"> For more information on lead contamination in candy, check out this <a href=" http://www.cdph.ca.gov/programs/Pages/FDB%20Lead%20In%20Candy%20Program.aspx">info page from the California Department of Public Health.</a></p> -->
       </div>
     </div>
   </div>
+</div>
 </div>
 
 </body>
