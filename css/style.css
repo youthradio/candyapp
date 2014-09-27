@@ -86,13 +86,42 @@ p{
 
 }
 
+.in_cart, .out_cart{
+  height: 230px;
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+
+}
+
 
 .ppm{
 	margin: 0 auto;
 }
 
-.active img{
-  background-color: rgb(102, 142, 153);
+.active{
+  background-color: rgba(102, 142, 153, .2);
+}
+
+.active p{
+  color: white;
+}
+
+.drop-hover{
+  background-color: rgba(102, 142, 153, 1);
+}
+
+.text{
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  color:#96CCDD;
+  font-size: 20px;
 }
 
 /*#borderline{
@@ -136,7 +165,7 @@ p{
 }*/
 
 #candies{
-	padding-top: 8%;
+	padding-top: 5%;
 	position: relative;
 	bottom: 0;
 }
@@ -146,6 +175,10 @@ p{
 }
 .candy {
 	position: absolute;
+  -webkit-transition: opacity 500ms ease-out;
+  -moz-transition: opacity 500ms ease-out;
+  -o-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
 }
 
 #one {
@@ -504,6 +537,10 @@ hr{
 thead{
   width: 63%;
   background-color: rgba(102, 142, 153, .5)
+}
+
+.total{
+  font-size: 35px;
 }
 
 

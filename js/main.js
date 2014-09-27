@@ -22,6 +22,7 @@ function mobile(){
 function drag(){
   $(".candy").draggable({
     revert: 'invalid',
+    opacity: 0.55,
     stop: function(){
       $(this).draggable('option','revert','invalid');
       }
@@ -30,11 +31,13 @@ function drag(){
   // Makes the basket and cross dropable
   $(".in_cart").droppable({
     drop: buyCandy,
-    activeClass: 'active'
+    activeClass: 'active',
+    hoverClass: "drop-hover"
   })
   $(".out_cart").droppable({
      drop: ditchCandy,
-    activeClass: 'active'
+    activeClass: 'active',
+    hoverClass: "drop-hover"
   })
 
 // Handle the drop
@@ -75,11 +78,7 @@ function drag(){
     .data(function(d){ return d3.values(d)})
     .enter().append("td")
     .text(function(d){return d})
-    // var item = container.selectAll(".item")
-    //   .data(items)
-    //   .enter().append("li")
-    //   .text(function(d) { return d.name; })
-    //   .classed("item", true)
+    total = "TOTAL: " + total
     $("#total").html(total)
     $('#myModal4').modal('show')
     setTimeout(function() {$('#paper-holder').addClass('print');}, 2000);
