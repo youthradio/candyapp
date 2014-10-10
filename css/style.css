@@ -4,6 +4,10 @@ body{
   font-family: 'Merriweather', serif;
   height: 100%;
 }
+
+body, .container-fluid{
+  min-width: 1290px;
+}
 #title{
 	height: 60px;
 	margin-top: 20px;
@@ -534,7 +538,7 @@ tr:hover{
   text-align: justify;
   padding: 5px;
   top: 279px;
-  left: 23%;
+  left: 22%;
 }
 
 .burst {
@@ -604,10 +608,10 @@ tr:hover{
   }
 }
 
-@media only screen
+/*@media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)  {
 .answer{
 	font-size: 12px;
 	}
-}
+}*/
